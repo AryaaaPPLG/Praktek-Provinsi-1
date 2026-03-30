@@ -1,0 +1,94 @@
+/* Memastikan background menutupi seluruh layar dan elemen ada di tengah */
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f7f6; /* Warna abu-abu super terang biar gak sakit di mata */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Kotak form login utamanya */
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Bayangan tipis elegan */
+    width: 100%;
+    max-width: 400px; /* Biar di layar gede kotak loginnya gak melar */
+}
+
+/* Bagian Judul */
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h2 {
+    margin: 0;
+    color: #2c3e50; /* Biru dongker gelap */
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.login-header p {
+    margin: 5px 0 0;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Jarak antar inputan */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Desain Kotak Input */
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #e0e6ed;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Wajib biar padding gak bikin kotak keluar jalur */
+}
+
+/* Animasi saat input diklik/difokuskan */
+.input-group input:focus {
+    outline: none;
+    border-color: #3498db; /* Berubah biru pas diklik */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Desain Tombol */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db; /* Warna biru profesional */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+/* Efek saat mouse ada di atas tombol */
+.btn-login:hover {
+    background-color: #2980b9;
+}
+
+/* Efek tombol sedikit mengecil saat ditekan (Interactive feel) */
+.btn-login:active {
+    transform: scale(0.98);
+}
