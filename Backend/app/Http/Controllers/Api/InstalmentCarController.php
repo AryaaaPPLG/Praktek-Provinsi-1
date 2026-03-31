@@ -21,7 +21,7 @@ class InstalmentCarController extends Controller
 
     public function getDetailCar($id)
     {
-        $car = Car::with('availableMonth')->find($id);
+        $car = Car::with('availableMonths')->find($id);
 
         if(!$car) {
             return ApiResponse::errorMessage('Car Not Found', 404);
@@ -45,7 +45,7 @@ class InstalmentCarController extends Controller
         }
 
         $car = Car::findOrFail($request->instalment_id);
-        $amountPerMonth = $car->price / $request->month;
+        $amountPerMonth = $car->price / $request->months;
 
         Application::create([
             'society_id' => $societyId,
