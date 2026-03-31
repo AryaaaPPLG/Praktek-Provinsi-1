@@ -24,7 +24,7 @@ export default function Login() {
             navigate('/dashboard');
         } catch (error) {
             const messageError = error.response?.data?.message || 'Waduh Login Gagal Cuy';
-            alert(pesanError);
+    alert(messageError);
         } finally {
             setLoading(false);
         }
@@ -39,13 +39,16 @@ export default function Login() {
                     <p>Portal Pengajuan Kredit Mobil</p>
                 </div>
                 
-                <form className="login-form">
+                <form className="login-form" onSubmit={handleLogin}>
                     <div className="input-group">
                         <label htmlFor="idCard">ID Card Number</label>
                         <input 
                             type="text" 
                             id="idCard" 
+                            value={idCardNumber}
                             placeholder="Masukkan 8 digit ID Card" 
+                            onChange={(e) => setIdCardNumber(e.target.value)}
+                            required
                         />
                     </div>
 
@@ -54,13 +57,15 @@ export default function Login() {
                         <input 
                             type="password" 
                             id="password" 
+                            value={password}
                             placeholder="Masukkan password Anda" 
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
 
                     {/* Pakai type="button" sementara biar gak ke-refresh pas diklik */}
-                    <button type="button" className="btn-login">
-                        Masuk Sekarang
+                    <button type="submit" disabled={loading} className="btn-login">
+                        {loading ? "Lagi Loading" : "Gas Login Cuy!"}
                     </button>
                 </form>
 

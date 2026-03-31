@@ -11,4 +11,9 @@ class AvailableMonth extends Model
         'car_id',
         'month'
     ];
+
+    public function car()
+    {
+        return $this->belongsTo(Car::class);
+    }
 }

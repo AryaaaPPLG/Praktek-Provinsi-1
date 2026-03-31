@@ -14,4 +14,9 @@ class Car extends Model
         'price',
         'description'
     ];
+
+    public function availableMonths()
+    {
+        return $this->hasMany(AvailableMonth::class);
+    }
 }

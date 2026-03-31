@@ -1,0 +1,109 @@
+/* Layout Dasar */
+.dashboard-container {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Minimalis */
+.navbar {
+    background-color: #2c3e50; /* Biru Dongker Gelap */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-logout {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-logout:hover {
+    background: white;
+    color: #2c3e50;
+}
+
+/* Konten Utama */
+.dashboard-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    color: #2c3e50;
+    font-weight: 300;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Section dan Card */
+.dashboard-section {
+    margin-bottom: 40px;
+}
+
+.dashboard-section h2 {
+    color: #7f8c8d;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e0e6ed;
+}
+
+.validation-empty p {
+    margin: 0 0 15px 0;
+    color: #34495e;
+    font-weight: bold;
+}
+
+/* Tombol Biru Utama */
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* Alert Warning Kuning (Sesuai PDF Juri) */
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #ffeeba;
+    font-weight: 500;
+}
