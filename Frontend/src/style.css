@@ -1,0 +1,181 @@
+/* =========================================================
+   GLOBAL RESET & BACKGROUND
+   ========================================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Abu-abu super terang biar bersih */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   NAVBAR Khas LKS (Biru Dongker)
+   ========================================================= */
+.navbar {
+    background-color: #1b3b5c; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* =========================================================
+   WADAH UTAMA (CONTAINER)
+   ========================================================= */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-weight: 300;
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e6ed;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* =========================================================
+   CARD / BOX (Biar kotak mobilnya rapi)
+   ========================================================= */
+.box {
+    background-color: #ffffff; /* Latar harus putih! */
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+/* =========================================================
+   TOMBOL-TOMBOL
+   ========================================================= */
+.btn-blue {
+    background-color: #1b3b5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-blue:hover {
+    background-color: #122840;
+}
+
+.btn-red {
+    background-color: #dc3545; /* Merah menyala */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-red:hover {
+    background-color: #c82333;
+}
+
+.btn-logout {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+/* =========================================================
+   ALERT PENDING / WARNING
+   ========================================================= */
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border-left: 5px solid #ffeeba;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* =========================================================
+   FORM INPUT (Khusus halaman Request Validation)
+   ========================================================= */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #1b3b5c;
+    box-shadow: 0 0 0 3px rgba(27, 59, 92, 0.1);
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}

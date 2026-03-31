@@ -4,25 +4,28 @@ import api from "../Api";
 import "../Login.css"
 
 export default function Login() {
+    // inisiasi data yang dibutuhkan untuk login
     const [idCardNumber, setIdCardNumber] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
-
+    // Handle Login atau logika pada saat login
     const handleLogin = async (e) => {
         e.preventDefault();
         setLoading(true);
 
         try{
+            // kirim data nya ke auth/login
             const response = await api.post('auth/login', {
                 id_card_number: idCardNumber,
                 password: password
             });
-
+            // simpen tokennya di localstorage
             localStorage.setItem('token', response.data.token);
             navigate('/dashboard');
         } catch (error) {
+            // pesan error
             const messageError = error.response?.data?.message || 'Waduh Login Gagal Cuy';
     alert(messageError);
         } finally {
@@ -46,7 +49,7 @@ export default function Login() {
                             type="text" 
                             id="idCard" 
                             value={idCardNumber}
-                            placeholder="Masukkan 8 digit ID Card" 
+                            placeholder="Input Your 8 Digit ID Card" 
                             onChange={(e) => setIdCardNumber(e.target.value)}
                             required
                         />
@@ -58,7 +61,7 @@ export default function Login() {
                             type="password" 
                             id="password" 
                             value={password}
-                            placeholder="Masukkan password Anda" 
+                            placeholder="Input Your Password" 
                             onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>

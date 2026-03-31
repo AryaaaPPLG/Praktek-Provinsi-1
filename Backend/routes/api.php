@@ -21,6 +21,7 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::get('/instalment', [InstalmentCarController::class, 'getAllCars']);
     Route::get('/instalment/detail/{id}', [InstalmentCarController::class, 'getDetailCar']);
     Route::post('/apply', [InstalmentCarController::class, 'applyInstalment']);
+    Route::get('/applications', [InstalmentCarController::class, 'getMyApplication']);
 });
 });
 

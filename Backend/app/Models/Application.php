@@ -15,4 +15,9 @@ class Application extends Model
         'notes',
         'apply_status'
     ];
+
+    public function car()
+    {
+        return $this->belongsTo(Car::class);
+    }
 }

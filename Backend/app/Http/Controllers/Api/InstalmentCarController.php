@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Helpers\ApiResponse;
+use App\Http\Resources\ApplicationResource;
 use App\Http\Resources\InstalmentResource;
 use App\Models\Application;
 use App\Models\Car;
@@ -18,7 +19,7 @@ class InstalmentCarController extends Controller
             return ApiResponse::successMessage('cars', InstalmentResource::collection($cars)->resolve());
     }
 
-    public function getDetailCar($id) 
+    public function getDetailCar($id)
     {
         $car = Car::with('availableMonth')->find($id);
 
@@ -56,5 +57,14 @@ class InstalmentCarController extends Controller
         ]);
 
         return ApiResponse::successMessage('Applying for instalment successful', 200);
+    }
+
+    public function getMyApplication(Request $request)
+    {
+        $societyId = $request->user()->id;
+
+        $applications = Application::with('car')->where('society_id', $societyId)->get();
+
+       return ApiResponse::successMessage('instalment', ApplicationResource::collection($applications)->resolve(), 200);
     }
 }
