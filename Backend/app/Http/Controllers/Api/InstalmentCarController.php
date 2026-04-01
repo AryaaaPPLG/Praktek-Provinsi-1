@@ -15,7 +15,8 @@ class InstalmentCarController extends Controller
 {
     public function getAllCars()
     {
-        $cars = Car::with('availableMonths')->get();
+
+            $cars = Car::with('availableMonths')->get();
             return ApiResponse::successMessage('cars', InstalmentResource::collection($cars)->resolve());
     }
 
